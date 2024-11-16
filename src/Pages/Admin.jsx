@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import AdminPanel from "../Components/AdminPanel";
 import LoadingIndicator from '../Components/LoadingIndicator'
-import AdminPanel from '../Components/AdminPanel'
 
 
 function Admin() {
