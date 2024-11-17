@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SearchFilter from '../Components/SearchFilter'
 import ProfileList from '../Components/ProfileList'
-import Map from '../Components/Map'
+
 
 
 function Home() {
@@ -27,9 +27,9 @@ function Home() {
           onSelectProfile={setSelectedProfile}
         />
       </div>
-      <div className="w-full h-[400px]">
+      {/* <div className="w-full h-[400px]">
         <Map selectedProfile={selectedProfile} />
-      </div>
+      </div> */}
     </div>
   )
 }
