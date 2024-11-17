@@ -16,14 +16,10 @@ export const ProfileProvider= ({ children }) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(() => {
-    // Simulating API call to fetch profiles
+   
     const fetchProfiles = async () => {
       try {
-        // In a real application, you would make an API call here
-        // const response = await api.getProfiles()
-        // setProfiles(response.data)
-        
-        // Simulating API response for demonstration
+    
         setTimeout(() => {
           setProfiles([
             { id: 1, name: 'Abhishek Joshi', description: 'Software Engineer', address: 'Borivali, Maharashtra', image: 'https://randomuser.me/api/portraits/men/1.jpg' },
@@ -43,22 +39,19 @@ export const ProfileProvider= ({ children }) => {
   const addProfile = (newProfile) => {
     const profileWithId = { id: Date.now(), ...newProfile }
     setProfiles(prevProfiles => [...prevProfiles, profileWithId])
-    // Here you would typically make an API call to add the profile
-    // await api.addProfile(profileWithId)
+    
   }
 
   const editProfile = (editedProfile) => {
     setProfiles(prevProfiles => 
       prevProfiles.map(profile => profile.id === editedProfile.id ? editedProfile : profile)
     )
-    // Here you would typically make an API call to update the profile
-    // await api.updateProfile(editedProfile)
+   
   }
 
   const deleteProfile = (profileId) => {
     setProfiles(prevProfiles => prevProfiles.filter(profile => profile.id !== profileId))
-    // Here you would typically make an API call to delete the profile
-    // await api.deleteProfile(profileId)
+    
   }
 
   return (

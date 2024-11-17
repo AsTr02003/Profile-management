@@ -27,9 +27,7 @@ function Home() {
           onSelectProfile={setSelectedProfile}
         />
       </div>
-      {/* <div className="w-full h-[400px]">
-        <Map selectedProfile={selectedProfile} />
-      </div> */}
+     
     </div>
   )
 }
